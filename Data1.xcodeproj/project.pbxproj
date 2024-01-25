@@ -19,6 +19,7 @@
 		817D0E4B2B555B3D006638A0 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D0E4A2B555B3D006638A0 /* NewContactViewController.swift */; };
 		817D0E4D2B555BF7006638A0 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D0E4C2B555BF7006638A0 /* ContactListViewController.swift */; };
 		817D0E4F2B556082006638A0 /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D0E4E2B556082006638A0 /* EditContactViewController.swift */; };
+		81D91E412B6003A1004D64AC /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D91E402B6003A1004D64AC /* NewUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		817D0E4A2B555B3D006638A0 /* NewContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 		817D0E4C2B555BF7006638A0 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		817D0E4E2B556082006638A0 /* EditContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
+		81D91E402B6003A1004D64AC /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +114,9 @@
 				817D0E232B555320006638A0 /* Assets.xcassets */,
 				817D0E252B555320006638A0 /* LaunchScreen.storyboard */,
 				817D0E282B555320006638A0 /* Info.plist */,
-				817D0E4A2B555B3D006638A0 /* NewContactViewController.swift */,
+				81D91E402B6003A1004D64AC /* NewUserViewController.swift */,
 				817D0E4C2B555BF7006638A0 /* ContactListViewController.swift */,
+				817D0E4A2B555B3D006638A0 /* NewContactViewController.swift */,
 				817D0E4E2B556082006638A0 /* EditContactViewController.swift */,
 			);
 			path = Data1;
@@ -273,6 +276,7 @@
 				817D0E4B2B555B3D006638A0 /* NewContactViewController.swift in Sources */,
 				817D0E1D2B55531D006638A0 /* SceneDelegate.swift in Sources */,
 				817D0E4F2B556082006638A0 /* EditContactViewController.swift in Sources */,
+				81D91E412B6003A1004D64AC /* NewUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

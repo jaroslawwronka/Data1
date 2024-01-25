@@ -1,19 +1,21 @@
 //
-//  EditContactViewController.swift
+//  NewUserViewController.swift
 //  Data1
 //
-//  Created by Boss on 15/01/2024.
+//  Created by Boss on 23/01/2024.
 //
 
 import UIKit
 
-class EditContactViewController: UIViewController {
+class NewUserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+
     
 
 }
