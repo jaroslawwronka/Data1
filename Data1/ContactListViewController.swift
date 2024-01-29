@@ -16,6 +16,7 @@ class ContactListViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet var tableContactsView: UITableView!
     
+    @IBOutlet var WelcomeLbl: UILabel!
     private let tableView : UITableView! = {
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -39,6 +40,10 @@ class ContactListViewController: UIViewController, UITableViewDataSource {
         tableContactsView.addSubview(tableView)
         tableView.dataSource = self
         tableView.frame = tableContactsView.bounds
+        
+       
+        
+        
         
     }
     
