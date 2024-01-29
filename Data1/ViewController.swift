@@ -11,31 +11,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    struct userContact {
-        var firstName : String
-        var laseName : String
-        var firstMail : String
-        var secondMail : String
-        var firstPhone : String
-        var secondPhone : String
-        var streetName : String
-        var postCode : String
-        var cityName : String
-        var CountryName : String
-        //var imageContact : Image
-        
-    }
-    
-    struct user {
-        var login : String
-        var password : String
-        var userContacts : [userContact] = []
-        //var imageUser : ImageResource
-        
-    }
-    
-    var users : [user] = []
-    var currentUser : Int = -1
+   
 
     @IBOutlet weak var Login: UITextField!
     @IBOutlet weak var btnVerify: UIButton!
@@ -86,10 +62,11 @@ class ViewController: UIViewController {
     func UILoad(){
         
         users.append(.init(login: "jarek", password: "haslo"))
-        users.append(.init(login: "ala", password: "haslo1"))
-        //users[0].login = "jarek"
-        //users[0].password = "haslo"
+        users[users.count-1].userContacts.append(.init(firstName:  "Alicja", lastName: "Nowak", firstMail: "alicja.nowak@gmail.com", secondMail: "", firstPhone: "", secondPhone: "", streetName: "", postCode: "", cityName: "", CountryName: ""))
         
+        users.append(.init(login: "ala", password: "haslo1"))
+        
+                
     }
 
     @IBAction func VerifyLogin(_ sender: UIButton) {

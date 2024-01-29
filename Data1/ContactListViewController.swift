@@ -9,36 +9,52 @@ import UIKit
 
 
 class ContactListViewController: UIViewController, UITableViewDataSource {
+   
+   
 
-    private let tableView : UITableView = {
+    
+    
+    @IBOutlet var tableContactsView: UITableView!
+    
+    private let tableView : UITableView! = {
+        let table = UITableView()
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        return table
+    }()
+    
+  /*  private let overrride tableContactsView : UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         return table
         
-    }()
-    
-  
+    }()*/
     
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.addSubview(tableView)
+        configureModels()
+        tableContactsView.addSubview(tableView)
         tableView.dataSource = self
-        tableView.frame = view.bounds
+        tableView.frame = tableContactsView.bounds
+        
+    }
+    
+    func configureModels() {
+        
     }
     
     func tableView(_ tableView : UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        return users[currentUser].userContacts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //let Contacts = users[currentUser].userContacts[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "Hello world"
-        
+        cell.textLabel?.text = users[currentUser].userContacts[indexPath.row].lastName + " " + users[currentUser].userContacts[indexPath.row].firstName
         return cell
     }
 
