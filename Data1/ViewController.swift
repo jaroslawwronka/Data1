@@ -62,9 +62,20 @@ class ViewController: UIViewController {
     func UILoad(){
         
         users.append(.init(login: "jarek", password: "haslo"))
-        users[users.count-1].userContacts.append(.init(firstName:  "Alicja", lastName: "Nowak", firstMail: "alicja.nowak@gmail.com", secondMail: "", firstPhone: "", secondPhone: "", streetName: "", postCode: "", cityName: "", CountryName: ""))
+        
+        var tempI : Int = 0
+        
+        repeat {
+            
+            tempI = tempI + 1
+            users[users.count-1].userContacts.append(.init(firstName:  "Alicja", lastName: "Nowak "+String(tempI), firstMail: "alicja.nowak@gmail.com", secondMail: "", firstPhone: "", secondPhone: "", streetName: "", postCode: "", cityName: "", CountryName: ""))
+            
+            
+        } while !(tempI == 150)
+        
+       /* users[users.count-1].userContacts.append(.init(firstName:  "Alicja", lastName: "Nowak", firstMail: "alicja.nowak@gmail.com", secondMail: "", firstPhone: "", secondPhone: "", streetName: "", postCode: "", cityName: "", CountryName: ""))
         users[users.count-1].userContacts.append(.init(firstName:  "Roman", lastName: "Winegrodzki", firstMail: "roman.winegro11@gmail.com", secondMail: "", firstPhone: "", secondPhone: "", streetName: "", postCode: "", cityName: "", CountryName: ""))
-        users[users.count-1].userContacts.append(.init(firstName:  "Dariusz", lastName: "Mozak", firstMail: "dareczek@gmail.com", secondMail: "", firstPhone: "", secondPhone: "", streetName: "", postCode: "", cityName: "", CountryName: ""))
+        users[users.count-1].userContacts.append(.init(firstName:  "Dariusz", lastName: "Mozak", firstMail: "dareczek@gmail.com", secondMail: "", firstPhone: "", secondPhone: "", streetName: "", postCode: "", cityName: "", CountryName: "")) */
         
         users.append(.init(login: "ala", password: "haslo1"))
         
@@ -72,12 +83,17 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let controller = segue.destination as? ContactListViewController {
-            //if currentUser > -1 { controller.WelcomeLbl.text = ", "+users[currentUser].login }
+        if let controller1 = segue.destination as? ContactListViewController {
             //controller.modalTransitionStyle = .flipHorizontal
-            controller.modalPresentationStyle = .fullScreen
-            self.present(controller, animated: true, completion: nil)
+            controller1.modalPresentationStyle = .fullScreen
+            self.present(controller1, animated: true, completion: nil)
         }
+        if let controller2 = segue.destination as? NewUserViewController {
+            //controller.modalTransitionStyle = .flipHorizontal
+            controller2.modalPresentationStyle = .fullScreen
+            self.present(controller2, animated: true, completion: nil)
+        }
+        
     }
     
 

@@ -47,6 +47,18 @@ class ContactListViewController: UIViewController, UITableViewDataSource {
         
     }
     
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+       
+        
+        if identifier == "backToLoginVC" {
+           
+            return true
+        } else {
+            return false
+        }
+    }
+    
     func configureModels() {
         
     }
@@ -64,4 +76,13 @@ class ContactListViewController: UIViewController, UITableViewDataSource {
     }
 
    
+    @IBAction func backToLogin(_ sender: UIButton) {
+        
+        
+        if currentUser > -1 {
+            //users[currentUser].userContacts = []
+            currentUser = -1
+        }
+        dismiss(animated: true, completion: nil)
+    }
 }
