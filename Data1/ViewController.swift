@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         UILoad()
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
         var isNewUser : Bool = false
         
         if identifier == "EnterToContactListVC" {
+            
             var tempI : Int = -1
            
             repeat {
